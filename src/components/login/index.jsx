@@ -21,7 +21,6 @@ const Login = () => {
 
     return (
         <main>
-            <h1>session {session.user.name}</h1>
             <h1>status {status}</h1>
             {!session ? (
                 <>
