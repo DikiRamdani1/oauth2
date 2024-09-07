@@ -13,14 +13,6 @@ const Login = () => {
         signOut({ callbackUrl: '/' }); // Arahkan pengguna ke halaman utama setelah logout
     };
 
-    useEffect(() => {
-        if (status == 'loading' || !session) {
-            null
-        } else {
-            console.log(session.user)
-        }
-    }, [status])
-
     // Tampilkan status pengguna
     if (status === 'loading') {
         return <p>Loading...</p>; // Tampilkan loading saat data sesi masih dimuat
@@ -29,7 +21,7 @@ const Login = () => {
 
     return (
         <main>
-            <h1>session {session}</h1>
+            <h1>session {session.user.name}</h1>
             <h1>status {status}</h1>
             {!session ? (
                 <>
