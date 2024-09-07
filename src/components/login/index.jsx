@@ -29,6 +29,8 @@ const Login = () => {
 
     return (
         <main>
+            <h1>session {session}</h1>
+            <h1>status {status}</h1>
             {!session ? (
                 <>
                     <button onClick={handleLogin}>
